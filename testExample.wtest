@@ -1,9 +1,29 @@
-import example.pepita
+import example.*
+describe "grupo de tests" {
 
-describe "group of tests for pepita" {
+  test "Victoria practica tenis" {
 
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+    const victoria = new Deportista()
+
+    victoria.edad(20)
+    victoria.altura(210)
+    victoria.disciplina(tenis)
+    victoria.elemento(raqueta)
+    victoria.entrenadores(2)
+
+    assert.equals(2227, victoria.presupuesto())
   }
 
+  test "Victoria practica judo" {
+
+    const victoria = new Deportista()
+
+    victoria.edad(20)
+    victoria.altura(150)
+    victoria.disciplina(judo)
+    victoria.elemento(trajeJudo)
+    victoria.entrenadores(4)
+
+    assert.equals(8004, victoria.presupuesto())
+  }
 }
